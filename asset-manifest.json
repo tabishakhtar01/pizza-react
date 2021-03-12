@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/pizza-react/static/css/main.e6a2f7f2.chunk.css",
+    "main.js": "/pizza-react/static/js/main.bf7fa0c0.chunk.js",
+    "main.js.map": "/pizza-react/static/js/main.bf7fa0c0.chunk.js.map",
+    "runtime-main.js": "/pizza-react/static/js/runtime-main.f87f7f31.js",
+    "runtime-main.js.map": "/pizza-react/static/js/runtime-main.f87f7f31.js.map",
+    "static/css/2.ac82d1d8.chunk.css": "/pizza-react/static/css/2.ac82d1d8.chunk.css",
+    "static/js/2.4cc661ff.chunk.js": "/pizza-react/static/js/2.4cc661ff.chunk.js",
+    "static/js/2.4cc661ff.chunk.js.map": "/pizza-react/static/js/2.4cc661ff.chunk.js.map",
+    "index.html": "/pizza-react/index.html",
+    "static/css/2.ac82d1d8.chunk.css.map": "/pizza-react/static/css/2.ac82d1d8.chunk.css.map",
+    "static/css/main.e6a2f7f2.chunk.css.map": "/pizza-react/static/css/main.e6a2f7f2.chunk.css.map",
+    "static/js/2.4cc661ff.chunk.js.LICENSE.txt": "/pizza-react/static/js/2.4cc661ff.chunk.js.LICENSE.txt",
+    "static/media/cart-icon.7033f674.png": "/pizza-react/static/media/cart-icon.7033f674.png",
+    "static/media/cheese-n-corn.5d943791.png": "/pizza-react/static/media/cheese-n-corn.5d943791.png",
+    "static/media/chicken-golden.8f2bf8eb.png": "/pizza-react/static/media/chicken-golden.8f2bf8eb.png",
+    "static/media/chicken-sausage.c2924b0b.png": "/pizza-react/static/media/chicken-sausage.c2924b0b.png",
+    "static/media/delux-veggie.894ff572.png": "/pizza-react/static/media/delux-veggie.894ff572.png",
+    "static/media/farmhouse.324d268b.png": "/pizza-react/static/media/farmhouse.324d268b.png",
+    "static/media/hero-pizza.e428247b.png": "/pizza-react/static/media/hero-pizza.e428247b.png",
+    "static/media/margherita.4a83a6d2.png": "/pizza-react/static/media/margherita.4a83a6d2.png",
+    "static/media/mexican-wave.184e979f.png": "/pizza-react/static/media/mexican-wave.184e979f.png",
+    "static/media/non-veg-supreme.f845ae12.png": "/pizza-react/static/media/non-veg-supreme.f845ae12.png",
+    "static/media/pepper-barbecue.c81292f9.png": "/pizza-react/static/media/pepper-barbecue.c81292f9.png",
+    "static/media/peppy-paneer.1a6bbde4.png": "/pizza-react/static/media/peppy-paneer.1a6bbde4.png",
+    "static/media/pizza-menu.0bb010bc.png": "/pizza-react/static/media/pizza-menu.0bb010bc.png",
+    "static/media/veg-extravaganza.dd82a481.png": "/pizza-react/static/media/veg-extravaganza.dd82a481.png",
+    "static/media/veggie-paradise.28d2b465.png": "/pizza-react/static/media/veggie-paradise.28d2b465.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f87f7f31.js",
+    "static/css/2.ac82d1d8.chunk.css",
+    "static/js/2.4cc661ff.chunk.js",
+    "static/css/main.e6a2f7f2.chunk.css",
+    "static/js/main.bf7fa0c0.chunk.js"
+  ]
+}

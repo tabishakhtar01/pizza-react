@@ -119,6 +119,12 @@ const Pizza = () =>
     {
         setPage(nextPage);
     }  
+
+    const removeFromcart = (productToremove) =>
+    {
+        setCart(cart.filter((remove)=> remove != productToremove ));
+    }
+
     var sum=0;
     {cart.map((x)=>
         {
@@ -128,8 +134,10 @@ const Pizza = () =>
     //
     return (<>
     <div className='d-flex justify-content-around'>
-        <button style={{letterSpacing: '2px', fontWeight : 'bolder', fontSize : '17px'}} className="btn btn-primarys w-50" onClick={()=>navigateTo('cart')}>{`Go To Cart (${cart.length})`}</button>
-        <button style={{letterSpacing: '2px', fontWeight : 'bolder', fontSize : '17px'}} className="btn btn-primarys  w-50" onClick={()=>navigateTo('products')}><b>Go To Products</b></button>
+    <button className="px-4 py-2 mb-5 add-to-cart  w-45" onClick={()=>navigateTo('cart')} style={{width : '45%',
+                textDecoration : 'none',letterSpacing : '0.5px', fontWeight : 'bolder'}}>{`Go To Cart (${cart.length})`}</button>
+        <button className="px-4 py-2 mb-5 add-to-cart w-45" onClick={()=>navigateTo('products')} style={{width : '45%',
+                textDecoration : 'none',letterSpacing : '0.5px', fontWeight : 'bolder'}}>Go To Products</button>
     </div>
         
         {page === 'products' && (<>
@@ -212,9 +220,11 @@ const Pizza = () =>
                         <div className="pizza-list">
                         <div className="d-flex align-items-center justify-content-around">
                             <img className="w-25 lol" src={prod.img} alt="pizza"/>
-                            <div className="ml-4">
+                            <div className="ml-4 d-flex flex-column">
                                 <h1 className='head'>{prod.name}</h1>
                                 <span className='size'>{prod.size}</span>
+                                <button style={{borderRadius : '10px',border :'none'}} className='btn-primarys text-white mt-2 px-4' onClick={()=>removeFromcart(prod)}>Remove</button>
+
                             </div>
                             <span className=""><b>{`Rs ${prod.price}`}</b></span>
                             </div><hr/>

@@ -8,7 +8,7 @@ const CartMenu = () =>
 
     return (
         <>
-        <section className="cart" id='cart'>
+        <section className="cart" id='menupage'>
 
         <div className="order container mx-auto w-full">
         <div className="d-flex pt-5 align-items-center justify-content-center pb-4">

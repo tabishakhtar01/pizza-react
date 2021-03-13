@@ -18,6 +18,7 @@
 
 section.hero {
   background: #F8F8F8;
+  height: fit-content;
 }
 .size {
   background: #F8F8F8;

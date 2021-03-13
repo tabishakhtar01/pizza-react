@@ -17,9 +17,9 @@ const Navbars = () =>
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-dark">
           <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to="/"><h6>Menu</h6></Link>
-          <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to="#"><h6>Register</h6></Link>
-          <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to="#"><h6>Login</h6></Link>
-          <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to='/cart'><img style={{height: '30px'}} src={cartIcon} alt='cart'/></Link>
+          {/* <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to="#"><h6>Register</h6></Link> */}
+          {/* <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to="/logout"><h6>Logout</h6></Link> */}
+          {/* <Link className='text-dark navi text-center pt-2 pl-4' style= {{textDecoration:'none'}} to='/cart'><img style={{height: '30px'}} src={cartIcon} alt='cart'/></Link> */}
 
           </Nav>
           </Navbar.Collapse>

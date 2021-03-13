@@ -16,10 +16,10 @@ const Home = () =>
                 <h1 className="dontWait">Don't wait!!</h1>
                 <button className="px-4 py-2 mb-5 text-white mt-4 btn-primarys" style={{borderRadius :'30px',borderStyle : 'none',
                 textDecoration : 'none',}}>
-                <a style={{textDecoration: 'none'}} className='text-white' href="#menupage">Order Now</a></button>
+                <a style={{textDecoration: 'none'}} className='text-white' href="#orderNow">Order Now</a></button>
             </div>
             <div className="w-50">
-                <img src={heroPizza} style={{width : '85%'}} alt="hero-pizza"/>
+                <img src={heroPizza} className='heroImg' style={{width : '85%'}} alt="hero-pizza"/>
             </div>
         </div>
     </section>

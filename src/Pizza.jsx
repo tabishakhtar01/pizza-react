@@ -24,6 +24,7 @@ import pepperBarbecue from './images/pepper-barbecue.png';
 import chickenSausage from './images/chicken-sausage.png';
 import chickenGolden from './images/chicken-golden.png';
 import nonVegSupreme from './images/non-veg-supreme.png';
+import EmptyCart from './images/empty-cart.png';
 import { useState } from 'react';
 //
 
@@ -32,80 +33,79 @@ const Pizza = () =>
     //
     const [cart,setCart] = useState([]);
     const [page,setPage]= useState('products');
-    const [total,setTotal] = useState(cart.price);
+    const [total,setTotal] = useState();
 
-    console.log(total);
     const [pizzaLi] = useState([
         {
             img : margherita,
             name : 'Margherita',
-            price : '99',
+            price : 99,
             size : 'small'
         },
         {
             img : peppyPaneer,
             name : 'Peppy Paneer',
-            price : '200',
+            price : 200,
             size : 'medium'
         },
         {
             img : mexicanWave,
             name : 'Mexican Wave',
-            price : '270',
+            price : 270,
             size : 'large'
         },
         {
             img : deluxVeggie,
             name : 'Delux Veggie',
-            price : '210',
+            price : 210,
             size : 'medium'
         },
         {
             img : vegExtravaganza,
             name : 'VegExtravaganza',
-            price : '240',
+            price : 240,
             size : 'small'
         },
         {
             img : cheeseNcorn,
             name : 'Cheese N Corn',
-            price : '115',
+            price : 115,
             size : 'large'
         },
         {
             img : veggieParadise,
             name : 'Veggie Paradise',
-            price : '290',
+            price : 290,
             size : 'large'
         },
         {
             img : farmHouse,
             name : 'Farm House',
-            price : '245',
+            price : 245,
             size : 'small'
         },
         {
             img : pepperBarbecue,
             name : 'Pepper Barbecue',
-            price : '300',
+            price : 300,
             size : 'medium'
         },
         {
             img : chickenSausage,
             name : 'Chicken Sausage',
-            price : '350',
+            price : 350,
             size : 'large'
         },
         {
             img : chickenGolden,
             name : 'Chicken Delight',
-            price : '370',
+            price : 370,
             size : 'large'
         },
         {
             img : nonVegSupreme,
             name : 'NonVeg Supreme',
-            price : '420',
+            price : 420,
             size : 'medium'
         }
         ])
@@ -118,18 +118,23 @@ const Pizza = () =>
     const navigateTo = (nextPage) =>
     {
         setPage(nextPage);
-    }
-        
+    }  
+    var sum=0;
+    {cart.map((x)=>
+        {
+            sum = sum+x.price;
+        })}
+        console.log(sum);
     //
     return (<>
     <div className='d-flex justify-content-around'>
-        <button className="btn btn-primarys w-50" onClick={()=>navigateTo('cart')}><b>{`Go To Cart (${cart.length})`}</b></button>
-        <button className="btn btn-primarys w-50" onClick={()=>navigateTo('products')}><b>Go To Products</b></button>
+        <button style={{letterSpacing: '2px', fontWeight : 'bolder', fontSize : '17px'}} className="btn btn-primarys w-50" onClick={()=>navigateTo('cart')}>{`Go To Cart (${cart.length})`}</button>
+        <button style={{letterSpacing: '2px', fontWeight : 'bolder', fontSize : '17px'}} className="btn btn-primarys  w-50" onClick={()=>navigateTo('products')}><b>Go To Products</b></button>
     </div>
         
         {page === 'products' && (<>
 
-        <h3 className='container text-center mt-5 mb-5'>All Pizzas</h3>
+        <h3 className='container text-center mt-5 mb-5' id='orderNow'>All Pizzas</h3>
         <div style={{display : 'flex', margin : 'auto'}} className='row res'>
         {pizzaLi.map((product)=>
         {
@@ -173,8 +178,25 @@ const Pizza = () =>
 
         {page === 'cart' && (
             <>
-            {cart.length == 0 && <h1>Nothinf</h1>}
-            <section className="cart" id='menupage'>
+            {cart.length == 0 ? (<div><section class="mt-5 empty-cart">
+    
+    <div className="container mx-auto text-center">
+        
+        <h1 className="mb-5">Cart Empty 😲</h1><hr/>
+
+        <h5 className="mb-5">You probably haven't ordered a pizza yet.</h5>
+
+            <h5>To order a pizza, go to the Product page.</h5>
+        
+        <img className="w-50 mx-auto" src={EmptyCart} alt="empty-cart"/>
+    
+    </div>
+    
+    </section>
+    </div>)
+    :
+     ( 
+         <section className="cart" id='menupage'>
                 <div className="order container mx-auto w-full">
                     <div className="d-flex pt-5 align-items-center justify-content-center pb-4">
                         <div className='w-25'>
@@ -184,6 +206,7 @@ const Pizza = () =>
                     </div><hr/>
                         {cart.map((prod)=>
                         {
+                        {console.log(prod.price)}
                         return(
                         <>
                         <div className="pizza-list">
@@ -198,8 +221,23 @@ const Pizza = () =>
                         </div>
                         </>)})}
 
+                        <div className="text-right py-4">
+
+                        <div style={{fontSize : '20px'}}>
+                            <span className="text-lg font-bold">Total Amount: </span>
+                            <span className="amount font-bold text-2xl ml-2">{`Rs ${sum}`}</span>
+                        </div>
+
+                        <div>
+                    <div>
+                        <button type="submit" style={{backgroundColor: '#960202', color : 'white', borderRadius : '30px'}} className="btn px-5 py-2 mt-5">Order Now</button>
+                    </div>
+
+            </div>
+                        </div>
                 </div>
             </section>
+     )}
 
             </>
         )}

@@ -9,10 +9,11 @@ const Main = () =>
     return(
         <>
         <Navbars/>
-        <Switch>
-            <Route exact path = '/' component={Home}/>
+        <Home />
+        {/* <Switch> */}
+            {/* <Route exact path = '/' component={Home}/> */}
             {/* <Route exact path = '/cart' component={CartMenu}/> */}
-        </Switch>
+        {/* </Switch> */}
         </>
     )
 }

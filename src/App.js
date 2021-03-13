@@ -30,7 +30,7 @@ function App()
       })
     }else{
       console.log('Details do Not Match');
-      setError('Details Do Not Match')
+      setError('Invalid Credentials')
     }
   }
 
@@ -45,9 +45,10 @@ function App()
 
   return (
     <>
+
     <div>
       {(user.email != '' )? <div><Main/>
-      <button className='btn btn-danger w-100' onClick={Logout}>Logout</button></div> : <LoginForm Login={Login} error={error}/>}
+      <button className='btn btn-danger logout w-100' onClick={Logout}>Logout</button></div> : <LoginForm Login={Login} error={error}/>}
     </div>
     </>
   )
